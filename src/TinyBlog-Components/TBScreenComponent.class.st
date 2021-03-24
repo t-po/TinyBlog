@@ -10,7 +10,7 @@ Class {
 { #category : #accessing }
 TBScreenComponent >> blog [
 	"Return the current blog. In the future we will ask the session to return the blog of the currently logged in user."
-	TBMBlog current
+	^ TBMBlog current
 ]
 
 { #category : #hooks }
@@ -31,6 +31,5 @@ TBScreenComponent >> initialize [
 
 { #category : #rendering }
 TBScreenComponent >> renderContentOn: html [
-	html render:  header 
-
+	html render: header 
 ]

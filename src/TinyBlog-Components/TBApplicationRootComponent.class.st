@@ -33,12 +33,18 @@ TBApplicationRootComponent >> children [
 { #category : #initialization }
 TBApplicationRootComponent >> initialize [
 	super initialize.
-	main := TBScreenComponent new
+	main := TBPostsListComponent new
+]
+
+{ #category : #accessing }
+TBApplicationRootComponent >> main: aComponent [
+	main := aComponent
+
 ]
 
 { #category : #rendering }
 TBApplicationRootComponent >> renderContentOn: html [
-	html text: main
+	html render: main
 ]
 
 { #category : #updating }
